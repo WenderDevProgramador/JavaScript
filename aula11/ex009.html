@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de imigrantes</title>
+</head>
+<body>
+    <h1>Sistema de Imigrantes</h1>
+    Qual o seu pais? <input type="text" name="pais" id="ipais">
+    <input type="button" value="Verificar" onclick="ver()">
+    <div id="mostra">
+
+    </div>
+    <script>
+        function ver(){
+            var pais = window.document.querySelector('#ipais')
+            var mostra = window.document.querySelector('#mostra')
+            var res = String(pais.value)
+            mostra.innerHTML = `<p>O seu pais é <b> ${res} </b></p>`
+            if (res == 'Brasil') {
+                mostra.innerHTML += '<p>Você é Brasileiro</p>'
+            }
+            else {
+                mostra.innerHTML += '<p>Você é estrangeiro</p>'
+            }
+        }
+    </script>
+</body>
+</html>
