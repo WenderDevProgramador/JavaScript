@@ -13,36 +13,44 @@
         }
         body {
             background-color: rgb(62, 99, 111);
+            height: 70vh;
         }
 
         header {
             color: white;
             text-align: center;
-            margin: 20px;
+            margin:40px  10px 10px 10px;
         }
 
         main {
             
-            padding: 10px;
-            margin: 10px;
-
-        }
-
-        section#um {
             background-color: white;
             border-radius: 10px;
             padding: 15px;
             width: 500px;
             margin: auto;
             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.548);
+            
+            
+            
+
         }
 
-        section#dois {
+        section#form {
+           margin: 10px;
+        }
 
+        input {
+            margin: 8px;
+        }
+
+        section#res {
+            text-align: center;
+            margin: 10px;
         }
 
         footer {
-            margin: 20px;
+            margin: 10px;
             color: white;
             text-align: center;
             font-style: italic;
@@ -54,15 +62,28 @@
 </head>
 <body>
     <header>
-        <h1>Título</h1>
+        <h1>Verificador De Idade</h1>
     </header>
     <main>
-        <section id="um">
-            testando
+        <section id="form">
+            <p>Ano de nascimento: 
+            <input type="number" name="idade" id="iidade" min="1" > 
+        </p>
+        <p>Sexo:
+            <input type="radio" name="sexo" id="masc" checked>
+            <label for="masc">Masculino</label>
+            <input type="radio" name="sexo" id="femi">
+            <label for="femi">Feminino</label>
+            
+        </p>
+        <p>
+            <input type="button" value="Verificar" onclick="verificar()">
+        </p>
+            
         </section>
         
-        <section id="dois">
-
+        <section id="res">
+            Prencha os dados acima para ver o resultado. . .
         </section>
 
     </main>
