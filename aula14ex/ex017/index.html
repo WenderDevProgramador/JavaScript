@@ -11,20 +11,70 @@
             font-family: Arial, Helvetica, sans-serif;
 
         }
+        body {
+            background-color: rgb(62, 99, 111);
+            padding: 20px;
+            
+        }
+
+        header {
+            color: white;
+            text-align: center;
+            margin: 60px;
+        }
+
+
+        main {
+            background-color: white;
+            border-radius: 10px;
+            padding: 15px;
+            max-width: 800px;
+            margin: auto;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.548);
+        }
+
+        #dados {
+            margin: 10px;
+            font-size: 1.2em;
+
+        }
+
+        #res {
+            margin: 10px;
+            padding: 10px;
+            
+            
+        }
+
+        footer {
+            margin: 60px;
+            color: white;
+            text-align: center;
+            font-style: italic;
+
+        }
        
+        option {
+            padding: 5px;
+        }
 
     </style>
 </head>
 <body>
     <header>
-        <h1></h1>
+        <h1>Tabuada</h1>
     </header>
     <main>
-        <div>
+        <div id="dados">
+            <p>Número: <input type="number" name="num" id="inum"> <input type="button" value=" Gerar Tabuada " onclick="Clicou()"></p>
             
         </div>
         
-        <div>
+        <div id="res">
+            
+            <select name="tabuada" id="itabuada" size="10">
+                <option><p>Mostra resultado</p></option>
+            </select>
             
         
         </div>
@@ -33,7 +83,7 @@
     </main>
 
     <footer>
-        <p>&copy;CursoEmVídeo</p>
+        <p>Wender p/ex &copy;CursoEmVídeo</p>
     </footer>
 
 
