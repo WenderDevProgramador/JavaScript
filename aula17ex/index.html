@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício JavaScript</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+        body {
+            background-color: rgb(62, 99, 111);
+            padding: 20px;
+            
+        }
+
+        header {
+            color: white;
+            text-align: center;
+            margin: 60px;
+        }
+
+
+        main {
+            background-color: white;
+            border-radius: 10px;
+            padding: 15px;
+            max-width: 800px;
+            margin: auto;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.548);
+        }
+
+        #dados {
+            margin: 10px;
+            font-size: 1.2em;
+
+        }
+
+        #res {
+            margin: 10px;
+            padding: 10px;
+            
+            
+        }
+
+        footer {
+            margin: 60px;
+            color: white;
+            text-align: center;
+            font-style: italic;
+
+        }
+       
+        select#iflista {
+            width: 150px;
+            padding: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Analisador De Números</h1>
+    </header>
+    <main>
+        <div>
+            Número (entre 1 e 100):
+            <input type="number" name="fnum" id="ifnum">
+            <input type="button" value="Adicionar" onclick="adicionar()">
+            <br>
+            <br>
+            <select name="flista" id="iflista" size="6"></select><br>
+            <input type="button" value="Finalizar" onclick="finalizar()">
+
+        </div>
+    
+        <div id="res">
+            
+        
+        </div>
+        
+
+    </main>
+
+    <footer>
+        <p>Wender p/ex &copy;CursoEmVídeo</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

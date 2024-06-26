@@ -13,3 +13,6 @@ for (var c in num) {
 
 console.log(`O número 15 está na posição ${num.indexOf(15)}`)
 console.log(`O número 18 está na posição ${num.indexOf(18)}`)
+
+let l = ['maçã','Arroz']
+console.log(l)
