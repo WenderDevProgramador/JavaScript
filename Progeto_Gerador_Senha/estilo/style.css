@@ -1,0 +1,126 @@
+@charset "UTF-08";
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    padding: 0px;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: #181818;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#ilogo {
+    max-width: 600px;
+    margin-bottom: 24px;
+}
+
+.container-input {
+    max-width:480px ;
+    margin: 14px 0px;
+}
+
+.container-input span {
+    color: white;
+    font-size: 1.3em;
+}
+
+#islider {
+    appearance: none;
+    width: 100%;
+    border-radius: 5px;
+    background:#dfdfdf;
+    height: 18px;
+    margin-top: 10px;
+    outline: none;
+}
+
+.button-cta {
+    height: 40px;
+    background-color: #3eb72b;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 40px;
+    color: #fff;
+    font-weight: bolder;
+    font-size: 1.2em;
+}
+
+.container-password {
+    max-width: 480px;
+    margin: 14px 0px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.title {
+    text-align: center;
+    color: #fff;
+    font-size: 1.4em;
+    margin-top: 24px;
+    margin-bottom: 8px;
+}
+
+#ipassword {
+    height: 60px;
+    background-color: rgba(0,0,0,0.40);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border: 2px solid #313131;
+    transition: transform 1s;
+}
+#ipassword:hover {
+    transform: scale(1.05);
+}
+
+
+
+#tooltip {
+    color: #fff;
+    position: relative;
+    top: 20px;
+    padding: 6px 8px;
+    background-color: rgb(15,15,15);
+    text-align: center;
+    font-size: 1.1em;
+    border-radius: 6px;
+    visibility: hidden;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+
+    
+}
+
+.hide {
+    display: none;
+}
+
+.container-password:hover #tooltip {
+    visibility: visible;
+    bottom: 50px;
+    opacity: 1;
+}
+
+footer p{
+    color: #fff;
+    text-align: center;
+    font-size: 0.7em;
+    margin-top: 40px;
+}
+
