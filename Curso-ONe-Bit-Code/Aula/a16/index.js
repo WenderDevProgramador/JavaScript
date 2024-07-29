@@ -1,4 +1,3 @@
-//Metodo map
 
 
 const personagens = [
@@ -11,11 +10,15 @@ const personagens = [
     { nivel: 29, nome: "Muradin", raca: "Anão", classe: "Guerreiro" },
 ]
 
+//Metodo sort altera o array original. Usamos para ordenar os elementos.
 
-const racas = personagens.reduce((acumulador, personagem) => {
-    acumulador[personagem.raca] = acumulador[personagem.raca] || [];
-    acumulador[personagem.raca].push(personagem);
-    return acumulador;
-}, {});
+//Orderna na ordem crescente
 
-console.log(racas);
+personagens.sort((a,b) => b.nivel - a.nivel)
+
+console.log(personagens)
+
+
+personagens.slice().sort((a,b) => b.nivel - a.nivel)
+
+console.log(personagens)
