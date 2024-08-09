@@ -33,16 +33,16 @@ function executar() {
                 criarVaga()
                 break
             case 3:
-                alert('3 - Visualizar uma vaga.')
+                exibirVaga()
                 break
             case 4:
                 inscreverCandidato()
                 break
             case 5:
-                alert('5 - Excluir vaga')
+                excluirVaga()
                 break
             case 6:
-                alert('6 - Saindo.')
+                alert('Saindo...')
                 break
 
             default:
@@ -85,28 +85,80 @@ function listarVagas () {
 }
 
 function inscreverCandidato () {
+    if (vagas.length === 0) {
+        alert('Não há vagas para fazer inscrição.')
+        return
+    }
+
     const candidato = prompt('Nome candidato: ')
     const indice = prompt('Indice da vaga:')
     const vaga = vagas[indice]
+    
 
     if (vaga) {
+        
         const confirmação = confirm('Confirme os dados para cadastro:\n' + 
         `Inscrever ${candidato} na vaga ${indice}?
         Nome: ${vaga.nome} 
-        Descrição: ${vaga.descricao} 
+        Descrição: ${vaga.descrição} 
         Data limite: ${vaga.dataLimite}`)
 
         if (confirmação) {
-            vaga.candidato.push(candidato)
+            vaga.candidatos.push(candidato)
             alert('Inscrição finalizada!')
         } else {
-            alert('Indice invalido!')
-        }
-    }
+            alert('Inscrição cancelada!')
+        } 
+    } else {
+        alert('Indice invalido!')
+    } 
 
 
 }
 
+function excluirVaga () {
+    if (vagas.length === 0) {
+        alert('Não há vagas para excluir.')
+        return
+    }
+
+    const indice = prompt('Informe o indice da vaga para excluir:')
+    
+
+    if (indice >= 0 && indice < vagas.length) {
+        const vaga = vagas[indice];
+
+        const confirmacao = confirm(`Confirma a exclusão da vaga ${indice}?\n
+        Nome: ${vaga.nome}\n
+        `);
+
+        if (confirmacao) {
+            vagas.splice(indice, 1);
+            alert('Vaga excluída!');
+        } else {
+            alert('Vaga mantida!');
+        }
+    } else {
+        alert('Índice inválido!'); 
+    }
+
+}
+
+function exibirVaga () {
+    const indice = prompt('Informe o indice da vaga:')
+    const vaga = vagas[indice]
+    const candidatosEmTexto = vaga.candidatos.reduce((textofinal,candidato) => {
+        return `${textofinal} \n - ${candidato}`
+    },'')
+
+    alert(`Vaga Nº ${indice}
+    Nome: ${vaga.nome}
+    Descrição: ${vaga.descrição}
+    Data limite: ${vaga.dataLimite}
+    Quantidade de candidados: ${vaga.candidatos.length}
+    Candidatos:
+    ${candidatosEmTexto}`)
+}
 executar ()
 
 
