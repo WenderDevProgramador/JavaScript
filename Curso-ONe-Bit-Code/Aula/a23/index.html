@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Praticando a Manipulação do DOM</title>
+  <script src="index.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <style>
+
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Escalação do Time</h1>
+    <h2>Dados do Atleta</h2>
+    
+    <p>
+      <label for="nome">Nome atleta:</label>
+      <input type="text" name="nome" id="nome" required>
+    </p>
+    <p>
+      <label for="camisa">Nº Camisa:</label>
+      <input type="number" name="camisa" id="camisa">
+    </p>
+    <p>
+      <label for="posição">Posição:</label>
+      <input type="text" name="posição" id="posição">
+    </p>
+    <p><button type="button" onclick="escalarJogador()">Escalar Jogador</button></p>
+    <div>
+    <h2>Remover Jogador</h2>
+    <p>
+      <label for="remove">Nº Jogador: </label>
+      <input type="number" name="remove" id="remove">
+      <button type="button" onclick="removePlayer()">Remover Jogador</button>
+    </p>
+    </div>
+  
+    <section id="lista">
+      <h2>Lista da escalação</h2>
+      <ul id="ul">
+
+      </ul>
+    </section>
+  </main>
+
+
+
+
+
+
+</body>
+</html>
