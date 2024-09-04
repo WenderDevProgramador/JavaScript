@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Vagas de Emprego</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Sistema de Vagas de Emprego</h1>
+    </header>
+
+    <!-- Menu de navegação -->
+    <nav>
+        <ul>
+            <li><a href="#" data-target="vagas-listagem">Listar Vagas</a></li>
+            <li><a href="#" data-target="formulario-vaga">Criar Nova Vaga</a></li>
+            <li><a href="#" data-target="formulario-candidato">Inscrever Candidato</a></li>
+            <li><a href="#" data-target="acoes">Limpar Dados</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Listagem das Vagas -->
+        <section id="vagas-listagem" class="secao">
+            <h2>Vagas Disponíveis</h2>
+            <ul id="vagas"></ul>
+            <div id="detalhesVaga"></div>
+        </section>
+
+        <!-- Formulário para Criar Nova Vaga -->
+        <section id="formulario-vaga" class="secao">
+            <h2>Criar Nova Vaga</h2>
+            <form id="form-criar-vaga">
+                <label for="nome">Nome da Vaga:</label>
+                <input type="text" id="nome" required>
+
+                <label for="descricao">Descrição:</label>
+                <input type="text" id="descricao" required>
+
+                <label for="dataLimite">Data Limite:</label>
+                <input type="date" id="dataLimite" required>
+
+                <button type="submit">Criar Vaga</button>
+            </form>
+        </section>
+
+        <!-- Formulário para Inscrever Candidato -->
+        <section id="formulario-candidato" class="secao">
+            <h2>Inscrever Candidato em uma Vaga</h2>
+            <form id="form-inscrever-candidato">
+                <label for="nomeCandidato">Nome do Candidato:</label>
+                <input type="text" id="nomeCandidato" required>
+
+                <label for="indiceVaga">Índice da Vaga:</label>
+                <input type="number" id="indiceVaga" required>
+
+                <button type="submit">Inscrever Candidato</button>
+            </form>
+        </section>
+
+        <!-- Botão para Limpar Dados -->
+        <section id="acoes" class="secao">
+            <h2>Limpar Dados</h2>
+            <button id="btn-limpar">Limpar Todos os Dados</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
