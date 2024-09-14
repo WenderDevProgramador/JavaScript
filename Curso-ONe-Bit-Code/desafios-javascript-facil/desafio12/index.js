@@ -43,4 +43,4 @@ function calcTroco(n) {
     return resultado.join('\n');
 }
 
-console.log(calcTroco(1553));
+console.log(calcTroco(23));
