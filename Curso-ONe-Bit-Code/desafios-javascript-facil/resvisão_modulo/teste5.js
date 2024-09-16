@@ -1,9 +1,7 @@
 
 function alteraOrdem(frase) {
-    let nova = frase.split(' ')
-    
-  
+    const inverte = frase.split(' ').map(palavra => palavra.split('').reverse().join('')); 
+    return inverte.join(' ').toLowerCase();   
 }
 
-
-console.log(alteraOrdem('Lorem ipsum dolore sec avanti'))
+console.log(alteraOrdem('Lorem ipsum dolore sec avanti'));
