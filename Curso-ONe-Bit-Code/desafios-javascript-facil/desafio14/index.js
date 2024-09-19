@@ -24,8 +24,28 @@ class Pilot {
     }
 
     generateFlyingLicense() {
-        
+        let lisense = ''
+        for(let i = 0; i < 5; i++) {
+            lisense += this.lastName[i] ? this.lastName[i].toUpperCase() : '9'
+        }
+        lisense += '-'
+        lisense += this.birthday.getFullYear().toString()[2]
+        lisense += this.birthday.getMonth() < 9 ? `0${this.birthday.getMonth() + 1}` : `${this.birthday.getMonth() + 1}`
+        lisense += this.birthday.getFullYear().toString()[3]
+
+        lisense += '.'
+        lisense += this.firstName[0].toLowerCase()
+
+        this.flyingLicense = lisense
     }
+
+   /* getBirthdayFullMonth() {
+        if(this.birthday.getMonth() < 9){
+            return `0${this.birthday.getMonth() + 1}`
+        } else {
+            return `${this.birthday.getMonth() + 1}`
+        }
+    } */
 }
 
 
