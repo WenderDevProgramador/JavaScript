@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Da Velha</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            height: 100vh;
+            
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            text-align: left;
+            margin-left: 200px;
+        }
+
+        b {
+            font-size: 3em;
+            margin: 0.5em;
+        }
+
+        button {
+            padding: 0.7em;
+            border-radius: 1em;
+        }
+
+        main {
+            margin: auto;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        #gameBoard {
+            margin: auto;
+            background-color: #232323;
+            display: grid;
+            grid-template-columns: 6rem 6rem 6rem;
+            grid-template-rows: 6rem 6rem 6rem;
+            gap: .5rem;
+            margin-bottom: 1.5rem;
+            max-width: 19rem;
+        }
+
+        #gameBoard span {
+            background-color: #ddd;
+            display: grid;
+            place-content: center;
+            font-size: 5rem;
+        }
+
+        #gameBoard span.win {
+            background-color: #25a340;
+        }
+
+        .cursor-pointer {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Jogo Da Velha</h1>
+    <hr>
+    <main>
+        <label for="player1"> <b>X</b></label>
+        <input type="text" name="player1" id="player1" placeholder="Nome 1º Jogador">
+        <label for="player2"><b>O</b></label>
+        <input type="text" name="player2" id="player2" placeholder="Nome 2º Jogador ">
+        <button type="button" id="start">Começar</button>
+        <h2>Vez de: <span id="turnPlayer"></span></h2>
+        <section id="gameBoard">
+            <span class="cursor-pointer" data-region="0.0"></span>
+            <span class="cursor-pointer" data-region="0.1"></span>
+            <span class="cursor-pointer" data-region="0.2"></span>
+            <span class="cursor-pointer" data-region="1.0"></span>
+            <span class="cursor-pointer" data-region="1.1"></span>
+            <span class="cursor-pointer" data-region="1.2"></span>
+            <span class="cursor-pointer" data-region="2.0"></span>
+            <span class="cursor-pointer" data-region="2.1"></span>
+            <span class="cursor-pointer" data-region="2.2"></span>
+        </section>
+    </main>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
