@@ -1,3 +1,8 @@
+const dayjs = require('dayjs')
+
+alert(`Hoje é : ${dayjs().format("DD/MM/YYYY")}`)
+
+
 const average = (...numbers) => {
     const sum = numbers.reduce((accum, num) => accum + num, 0)
     return sum / numbers.length
