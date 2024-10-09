@@ -1,4 +1,3 @@
-const path = require('path')
 
 module.exports = {
     entry: {
@@ -6,8 +5,11 @@ module.exports = {
         
     },
     mode: 'development',
-    output: {
-        path: path.resolve(__dirname, 'public'),
-        filename: 'bundle.min.js'
+    module: {
+        rule: [{
+            test: /\.css$/,
+            use: ['style-loader', 'css-loader']
+        }]
     }
+    
 }
