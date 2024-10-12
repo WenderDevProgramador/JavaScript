@@ -1,4 +1,11 @@
+const path = require('path');
+
 module.exports = {
+    devServer: {
+        static: {
+            directory: path.resolve(__dirname, 'dist')
+        }
+    },
     entry: {
         index: './src/index.js'
     },
@@ -6,7 +13,7 @@ module.exports = {
     module: {
         rules: [{
             test: /\.css$/,
-            use: ['style-loader','css-loader']
+            use: ['style-loader', 'css-loader']
         }, {
             test: /\.js$/,
             use: ['babel-loader']
