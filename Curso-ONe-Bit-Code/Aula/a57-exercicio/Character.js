@@ -6,7 +6,7 @@ class Character {
         this.ataque = ataque
     }
 
-    ataque(persoRecebeAtaque) {
+    ata(persoRecebeAtaque) {
         persoRecebeAtaque.ptsvida -= this.ataque - persoRecebeAtaque.defesa
     }
 }

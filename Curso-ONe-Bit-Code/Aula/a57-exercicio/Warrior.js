@@ -7,9 +7,9 @@ class Warrior extends Character {
         this.posicao = 'ataque'
     }
 
-    ataque(persoRecebeAtaque) {
+    ata(persoRecebeAtaque) {
         if (this.posicao === 'ataque') {
-            super.ataque(persoRecebeAtaque)
+            super.ata(persoRecebeAtaque)
         }
         
     }

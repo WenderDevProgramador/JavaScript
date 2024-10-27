@@ -1,3 +1,8 @@
+const Character = require("./Character.js");
+const Mage = require("./Mage.js");
+const Thief = require("./Thief.js");
+const Warrior = require("./Warrior.js");
+
 /* Crie as seguintes classes:
 
 -Uma classe Character que representa um personagem de um jogo.
@@ -30,10 +35,7 @@ Atributos:
 Metodo:
     . Um metodo de ataque que subitrai pontos de vidas dos outros personagens alvos. Um metodo para cada posição , defesa ou ataque, de defesa será atrelado aos pontos de escudo. */
 // index.js
-const Character = require("./Character.js");
-const Mage = require("./Mage.js");
-const Thief = require("./Thief.js");
-const Warrior = require("./Warrior.js");
+
 
 const zeNaldo = new Mage('Ze Naldo', 90, 4, 2, 14);
 const joaBila = new Thief('Jõa Bila', 140, 22, 8);
@@ -42,11 +44,11 @@ const babu = new Warrior('Babu', 200, 14, 12, 4);
 console.table({ zeNaldo, joaBila, babu });
 
 // Testando ataques
-joaBila.ataque(zeNaldo);
+joaBila.ata(zeNaldo);
 console.log("Após o ataque de joaBila em zeNaldo:");
 console.table({ zeNaldo, joaBila, babu });
 
 babu.mudarPosicao();
-zeNaldo.ataque(babu);
+zeNaldo.ata(babu);
 console.log("Após o ataque de zeNaldo em babu:");
 console.table({ zeNaldo, joaBila, babu });

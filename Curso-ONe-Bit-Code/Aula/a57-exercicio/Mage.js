@@ -6,7 +6,7 @@ class Mage extends Character {
         this.magia = magia
     }
 
-    ataque(persoRecebeAtaque) {
+    ata(persoRecebeAtaque) {
         
         persoRecebeAtaque.ptsvida -= (this.ataque + this.magia) - persoRecebeAtaque.defesa
     }

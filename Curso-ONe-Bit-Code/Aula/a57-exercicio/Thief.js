@@ -1,7 +1,7 @@
 const Character = require("./Character.js");
 
 class Thief extends Character {
-    ataque(persoRecebeAtaque) {
+    ata(persoRecebeAtaque) {
         persoRecebeAtaque.ptsvida -= (this.ataque - persoRecebeAtaque.defesa) * 2
     }
 }
