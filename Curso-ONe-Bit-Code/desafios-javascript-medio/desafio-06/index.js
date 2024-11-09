@@ -10,3 +10,22 @@
     Entrada : (7)
     Saida : 0
 */
+
+
+function multPers(num) {
+
+    if (num < 10) {
+        return 0
+    }
+
+    const algarismos = num.toString().split('')
+    const product = algarismos.reduce((accum, atual) => accum * atual, 1)
+
+    console.log(algarismos)
+
+    return 1 + multPers(product)
+}
+
+console.log(multPers(539))
+console.log(multPers(999))
+console.log(multPers(7))
