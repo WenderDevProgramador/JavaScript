@@ -1,0 +1,46 @@
+{
+  "articles": [
+    {
+      "id": "1",
+      "title": "Olá, mundo!",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam minus inventore voluptatem, eum repellat sed officiis aliquam",
+      "author": "Wender"
+    },
+    {
+      "id": "2",
+      "title": "Requisições POST com Javascript",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam minus inventore voluptatem, eum repellat sed officiis aliquam",
+      "author": "Wender"
+    },
+    {
+      "id": "c63b",
+      "title": "JavaScript",
+      "author": "Wender",
+      "content": "Lorem , isupum la la la "
+    },
+    {
+      "id": "24aa",
+      "title": "",
+      "author": "",
+      "content": ""
+    },
+    {
+      "id": "a254",
+      "title": "",
+      "author": "",
+      "content": ""
+    },
+    {
+      "id": "2c5f",
+      "title": "",
+      "author": "",
+      "content": ""
+    },
+    {
+      "id": "935d",
+      "title": "",
+      "author": "",
+      "content": ""
+    }
+  ]
+}
