@@ -1,24 +1,29 @@
 {
-    "transactions": [
-        {
-            "id": 1,
-            "name": "Freela",
-            "amount": 300
-        },
-        {
-            "name": "Salário",
-            "amount": 3200,
-            "id": 3
-        },
-        {
-            "name": "Conta de água",
-            "amount": -60,
-            "id": 4
-        },
-        {
-            "name": "Conta de luz",
-            "amount": -150,
-            "id": 5
-        }
-    ]
+  "transactions": [
+    {
+      "name": "Salario",
+      "amount": 5800,
+      "id": "a59b"
+    },
+    {
+      "id": "09e1",
+      "name": "conta agua",
+      "amount": -80
+    },
+    {
+      "id": "c3d9",
+      "name": "Seguro",
+      "amount": -180
+    },
+    {
+      "id": "902b",
+      "name": "Contas Apagar",
+      "amount": -1000
+    },
+    {
+      "id": "0c28",
+      "name": "Parcela carro",
+      "amount": -1300
+    }
+  ]
 }
