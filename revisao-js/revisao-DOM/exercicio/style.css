@@ -1,0 +1,192 @@
+@charset "UTF-08"; 
+
+.tech-item {
+    margin-bottom: 15px;
+}
+
+.experience-container {
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.radio-option label {
+    margin-left: 5px;
+}
+
+.remove-btn {
+    margin-top: 10px;
+    background-color: #ff5c5c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.remove-btn:hover {
+    background-color: #ff3030;
+}
+
+/* Reset CSS básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298); /* Fundo com gradiente */
+    color: #f4f4f9;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Estilização do título principal */
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Barra horizontal estilizada */
+hr {
+    border: none;
+    height: 2px;
+    background: #f4f4f9;
+    margin: 20px 0;
+}
+
+/* Estilização do Main */
+main {
+    background: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Subtítulo */
+h2 {
+    font-size: 1.8rem;
+    color: #f4f4f9;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ffffff;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Campos de formulário */
+p {
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+input[type="text"] {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Botão de adicionar tecnologia */
+button#addTech {
+    display: inline-block;
+    background: #f4f4f9;
+    color: #1e3c72;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button#addTech:hover {
+    background: #d3d3d3;
+    transform: scale(1.05);
+}
+
+/* Lista de tecnologias */
+ul#devCadastros {
+    list-style: none;
+    margin-top: 20px;
+}
+
+ul#devCadastros li {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #f4f4f9;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Botão de remover tecnologia */
+ul#devCadastros li button {
+    background: #ff5c5c;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    align-self: flex-end;
+}
+
+ul#devCadastros li button:hover {
+    background: #e63939;
+    transform: scale(1.05);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    input[type="text"] {
+        max-width: 100%;
+    }
+
+    button#addTech {
+        width: 100%;
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    ul#devCadastros li {
+        flex-direction: column;
+    }
+}
+
