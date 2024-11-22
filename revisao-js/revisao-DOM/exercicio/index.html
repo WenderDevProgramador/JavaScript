@@ -3,32 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cadastro de Desenvolvedores</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Cadastro de novos Desenvolvedores.</h1>
+    <h1>Cadastro de Novos Desenvolvedores</h1>
     <hr>
     <main>
         <h2>Cadastro:</h2>
-        <p>
+        <form id="devForm">
             <label for="nome">Nome:</label>
-            <input type="text" name="nome" id="nome">
-        </p>
-        <p>
-            <button id="addTech" type="button">Adicionar tecnologia</button>
-        </p>
-        
-        <hr>
-        
-        <section>
-            <ul id="devCadastros">
-
-            </ul>
-        </section>
+            <input type="text" name="nome" id="nome" placeholder="Digite o nome completo" required>
+            
+            <button id="addTech" type="button">Adicionar Tecnologia</button>
+            
+            <ul id="devCadastros"></ul>
+            
+            <button id="cadastrar" type="submit">Cadastrar Desenvolvedor</button>
+        </form>
     </main>
-
-
     <script src="index.js"></script>
 </body>
 </html>
