@@ -1,75 +1,195 @@
-/* Espaçamento e organização */
+/* Paleta de cores */
+:root {
+    --primary-color: #6200ea; /* Roxo moderno */
+    --secondary-color: #03dac6; /* Verde-água */
+    --background-color: #121212; /* Fundo escuro */
+    --card-color: #1e1e1e; /* Fundo dos elementos */
+    --text-color: #ffffff; /* Texto claro */
+    --button-hover: #3700b3; /* Cor do hover dos botões primários */
+    --danger-color: #cf6679; /* Vermelho para ações críticas */
+}
+
+/* Estilos gerais */
+body {
+    background: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
 main {
-    background: rgba(255, 255, 255, 0.1); 
-    border-radius: 10px;
-    padding: 30px; /* Aumentado o espaçamento interno */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-    max-width: 800px; /* Limita a largura do conteúdo */
-    margin: 0 auto; /* Centraliza o conteúdo */
+    background: var(--card-color);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    max-width: 80%; /* Ajusta melhor em telas pequenas */
+    margin: 40px auto;
+    transition: all 0.3s ease-in-out;
 }
 
 ul#devCadastros {
-    padding: 10px; /* Adicionado espaçamento interno */
+    padding: 15px;
+    list-style: none;
+    margin: 0;
 }
 
-/* Botões com estilo consistente */
+ul#devCadastros li {
+    background: var(--card-color);
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo dos botões */
 button {
     font-size: 1rem;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 10px 16px;
+    border-radius: 6px;
     border: none;
     cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
-}
-
-button:hover {
-    transform: scale(1.05);
+    transition: all 0.3s ease;
+    font-weight: bold;
 }
 
 button#addTech {
-    margin: 20px 10px 10px 10px;
-    background: #4caf50;
-    color: #fff;
+    background: var(--secondary-color);
+    color: var(--background-color);
 }
 
 button#addTech:hover {
-    background: #45a049;
+    background: var(--button-hover);
+    transform: scale(1.05);
 }
 
 button#cadastrar {
-    background: #1e88e5;
-    color: #fff;
+    background: var(--primary-color);
+    color: var(--text-color);
 }
 
 button#cadastrar:hover {
-    background: #1565c0;
+    background: var(--button-hover);
+    transform: scale(1.05);
 }
 
+/* Botões novos */
+button#showData {
+    background: var(--secondary-color);
+    color: var(--background-color);
+}
+
+button#showData:hover {
+    background: var(--button-hover);
+}
+
+button#clearData {
+    background: var(--danger-color);
+    color: var(--text-color);
+}
+
+button#clearData:hover {
+    background: #b00020;
+}
+
+/* Div de exibição */
+#dataDisplay {
+    background: var(--card-color);
+    border-radius: 8px;
+    margin-top: 20px;
+    padding: 20px;
+    color: var(--text-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    overflow-y: auto;
+    max-height: 300px;
+    display: none; /* Escondido por padrão */
+}
+
+#dataDisplay.hidden {
+    display: none;
+}
+
+#dataDisplay ul {
+    list-style: none;
+    padding: 0;
+}
+
+#dataDisplay li {
+    margin: 10px 0;
+    padding: 10px;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+
 ul#devCadastros li button {
-    background: #e53935;
-    color: white;
+    background: var(--danger-color);
+    color: var(--text-color);
 }
 
 ul#devCadastros li button:hover {
-    background: #d32f2f;
+    background: #b00020;
+}
+
+/* Input styles */
+input[type="text"] {
+    width: 85%;
+    padding: 12px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid var(--primary-color);
+    border-radius: 6px;
+    background: var(--card-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 8px var(--secondary-color);
 }
 
 /* Ajustes para responsividade */
 @media (max-width: 768px) {
     main {
-        padding: 20px;
-    }
-
-    input[type="text"], button {
-        width: 100%;
-        font-size: 1rem;
-    }
-
-    button {
-        padding: 12px;
+        padding: 15px;
+        max-width: 100%;
     }
 
     ul#devCadastros li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    input[type="text"] {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 10px;
+    }
+
+    ul#devCadastros li {
+        padding: 12px;
+    }
+
+    button {
+        font-size: 0.9rem;
         padding: 10px;
     }
 }

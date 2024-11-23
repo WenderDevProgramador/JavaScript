@@ -10,18 +10,18 @@
     <h1>Cadastro de Novos Desenvolvedores</h1>
     <hr>
     <main>
-        <h2>Cadastro:</h2>
         <form id="devForm">
             <label for="nome">Nome:</label>
-            <input type="text" name="nome" id="nome" placeholder="Digite o nome completo" required>
-            
-            <button id="addTech" type="button">Adicionar Tecnologia</button>
-            
+            <input type="text" id="nome" placeholder="Digite o nome do desenvolvedor" required />
+            <button type="button" id="addTech">Adicionar Tecnologia</button>
             <ul id="devCadastros"></ul>
-            
-            <button id="cadastrar" type="submit">Cadastrar Desenvolvedor</button>
+            <button type="submit" id="cadastrar">Cadastrar</button>
         </form>
+        <button id="showData">Exibir Dados</button>
+        <button id="clearData">Limpar Dados</button>
+        <div id="dataDisplay" class="hidden"></div>
     </main>
+    
     <script src="index.js"></script>
 </body>
 </html>
