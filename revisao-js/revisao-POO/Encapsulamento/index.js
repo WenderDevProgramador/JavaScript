@@ -5,10 +5,19 @@ class Account {
         this.email = user.email
         this.#password = user.password
         
+        
     }
 
     getBalance(email, password) {
-        
+        if (this.#authenticate(email,password)) {
+            return this.#password
+        } else {
+            return 'Dados incorretos!'
+        }
+    }
+
+    #authenticate (email, password) {
+        return email === this.email && password === this.#password
     }
 }
 
@@ -20,3 +29,4 @@ const user =  {
 const myAccount = new Account(user)
 
 console.log(myAccount)
+console.log(myAccount.getBalance('ze@email.com','123456'))
