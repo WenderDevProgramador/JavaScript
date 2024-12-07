@@ -22,6 +22,7 @@ export class Component {
         if(this.parent instanceof Component) {
             this.parent.getElement().append(this.#element)
         } else {
+            //Se não for uma instancea vamos usar uma string para encontrar o elemento pai no dom
             document.querySelector(this.parent).append(this.#element)
         }
     }
