@@ -1,3 +1,5 @@
+const Installment = require("./Installment")
+
 module.exports = class Loan {
     static #fee = 1.05
 
@@ -5,12 +7,10 @@ module.exports = class Loan {
         this.value = value
         this.installments = []
         for (let i = 1; i <= installments; i++) {
-            this.installments.push(new Installments((value * Loan.#fee ) / installments), i)
+            this.installments.push(new Installment((value * Loan.#fee) / installments, i))
         }
-
         this.createdAt = new Date()
     }
-
 
     static get fee() {
         return Loan.#fee
@@ -18,6 +18,5 @@ module.exports = class Loan {
 
     static set fee(newFeePercentage) {
         Loan.#fee = 1 + (newFeePercentage / 100)
-
     }
 }
