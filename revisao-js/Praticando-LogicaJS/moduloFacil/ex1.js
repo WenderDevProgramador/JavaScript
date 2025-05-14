@@ -1,19 +1,14 @@
-// Escreva uma função que recebe um número qualquer de números inteiros como argumentos e retorne a média aritimética entre else.
+//Escreva uma função que recebe um array bidimensional de inteiros e retorna um único array contendo todos os númeos em ordem ascendente.
 
-// Testes: (10,9,6,8,9,1,5,7)
-// Saída: (6.875)
-
-// Testes: (10,10,10,10,9)
-// Saída: (9.8)
+//Entrada : ([[1,5,3],[6,19,11],[47,128,5],[1,93,57,42,103]])
 
 
-function media(...numeros) {
-    
-    const n = numeros.reduce((acumm, num) => acumm + num,0)
-    return n / numeros.length
+function ordenar(arr) {
+    const numbers = []
+    const novoArr = arr.forEach(list => numbers.push(...list))
+    return numbers.sort((a,b) => a - b)
 
     
 }
 
-console.log(media(10,9,6,8,9,1,5,7))
-console.log(media(10,10,10,10,9))
+console.log(ordenar([[1,5,3],[6,19,11],[47,128,5],[1,93,57,42,103]]))

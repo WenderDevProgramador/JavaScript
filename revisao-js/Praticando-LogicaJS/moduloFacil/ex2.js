@@ -1,21 +1,20 @@
-//Escreva uma função que recebe um número e retorna uma quantidade equivalente de 'chunks' separados por um traço '-' sem últilizar nenhuma estrutura de repetição.
+//Escreva uma função que recebe uma string contendo um nome completo, e retorna uma string com todos os nomes, exerto o último, abreviados e o último nome em letras maiusculas antes das abreviações separados por vírgula.
 
-//Entrada: (4)
-//Saída: 'chunk-chunk-chunk-chunk'
+//Entrada: ('Isaac Larrubia Ferreira Pontes')
+//Saída: 'PONTES, I, L. F.
 
-function chunk(n) {
-    if (n === 0) {
-        return ''
+
+function nome(str) {
+    const lista = str.split(' ')
+    let initials = ''
+
+    for (let i = 0; i < lista.length - 1; i++) {
+        initials += `${lista[i][0].toUpperCase()}. `;
+        
     }
 
-    if (n === 1) {
-        return 'chunks'
-    } else {
-        return 'chunks-' + chunk(n -1)
-    }
-}
+    return `${lista[lista.length - 1].toUpperCase()}, ${initials}`
+} 
 
-console.log(chunk(4))
-console.log(chunk(40))
-console.log(chunk(8))
-console.log(chunk(2))
+console.log(nome('Isaac Larrubia Ferreira Pontes'))
+console.log(nome('Wender Rodolfo De Queiroz'))
