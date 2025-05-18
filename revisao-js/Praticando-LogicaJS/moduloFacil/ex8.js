@@ -26,7 +26,7 @@ class Pilot {
         this.name = name
         this.lastName = lastName
         this.date = new Date(date)
-        this.license=false
+        this.license = false
     }
 
     newLicens() {
