@@ -1,0 +1,21 @@
+// Escreva uma classe que contenha um método para gerar uma licença de voo e os seguintes atributos:
+
+//Nome , Sobre nome , Data de Nascimento, Licença de voo (oque deve iniciar sempre como falso)
+
+// Além disso a classe deve possuir um método para criar uma licença caso a pessoa ainda não possua uma. A licença deve ser uma string seguindo o seguinte padrão:
+
+// - Os primeiros cinco caracteres do sobrenome em letras maiúsculas (completado com 9´s caso possua menos de cinco)
+// - O 6º caracteres é um traço (-)
+// - O 7º é o algarismo da década (penúltimo) do ano de nascimento
+// - O 8º e 9º são o mês de nascimento
+// - O 10º é o algarismo do ano (último) do ano de nascimento
+// - O 11º é um ponto  .
+// - O 12º é a primeira letra do primeiro nome (minúscula)
+
+// //Entrada: {
+//     firstName: 'John',
+//     lastName: 'Doe',
+//     birthday: 1977-05-25T03:00:00.000Z,
+//     flyingLicense: 'DOE((-7057.j'
+// }
+//Saída: 
