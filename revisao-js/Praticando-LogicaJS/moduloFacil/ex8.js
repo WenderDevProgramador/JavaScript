@@ -22,21 +22,56 @@
 
 
 class Pilot {
-    constructor(name,lastName,date){
+    constructor(name, lastName, date) {
         this.name = name
         this.lastName = lastName
         this.date = new Date(date)
         this.license = false
     }
 
+
     newLicens() {
-        console.log( 'Licença gerada com sucesso')
+        const sobre = this.lastName.split('')
+        let nome1 = ''
+
+        for (let i = 0; i < 5; i++) {
+            if (i < sobre.length) {
+                nome1 += sobre[i];
+            } else {
+                nome1 += '9';
+            }
+        }
+
+        let license = `${nome1}-`
+        license += this.date.getFullYear().toString().slice(-2)[0]
+        const mes = this.date.getMonth().toString()
+        license += mes < 10 ? `0${+mes + 1}` : `${+mes + 1}`
+        license += this.date.getFullYear().toString().slice(-1)
+        license += `.`
+        license += this.name[0].toLowerCase()
+
+        return license
+
     }
 
     
+
+
 }
 
 
-const pilot1 = new Pilot('John','Doe','05-25-1977')
+const pilot1 = new Pilot('John', 'Doe', '05-25-1977')
 console.log(pilot1)
-pilot1.newLicens()
+console.log(pilot1.newLicens())
+
+const pilot2 = new Pilot('Hal', 'Jordan', '09-02-1995')
+console.log(pilot2)
+console.log(pilot2.newLicens())
+
+const pilot3 = new Pilot('Carol', 'Danvers', '08-17-1968')
+console.log(pilot3)
+console.log(pilot3.newLicens())
+
+const pilot4 = new Pilot('Wender', 'Queiroz', '06-11-1995')
+console.log(pilot4)
+console.log(pilot4.newLicens())
