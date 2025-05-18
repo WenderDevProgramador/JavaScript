@@ -12,10 +12,31 @@
 // - O 11º é um ponto  .
 // - O 12º é a primeira letra do primeiro nome (minúscula)
 
-// //Entrada: {
+// //Saída: Pilot {
 //     firstName: 'John',
 //     lastName: 'Doe',
 //     birthday: 1977-05-25T03:00:00.000Z,
 //     flyingLicense: 'DOE((-7057.j'
 // }
-//Saída: 
+// 
+
+
+class Pilot {
+    constructor(name,lastName,date){
+        this.name = name
+        this.lastName = lastName
+        this.date = new Date(date)
+        this.license=false
+    }
+
+    newLicens() {
+        console.log( 'Licença gerada com sucesso')
+    }
+
+    
+}
+
+
+const pilot1 = new Pilot('John','Doe','05-25-1977')
+console.log(pilot1)
+pilot1.newLicens()
