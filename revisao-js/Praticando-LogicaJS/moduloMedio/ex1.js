@@ -24,6 +24,12 @@ function romano(str) {
         M: 1000
     }
 
+
+    const todosValidos = mai.every(letra => tab.hasOwnProperty(letra))
+    if (!todosValidos) {
+        return 'Você deve digitar um algarismo romano válido'
+    }
+
     let total = 0
 
     for (let i = 0; i < mai.length; i++) {
