@@ -22,3 +22,4 @@ console.log(book1.inStock);
 book1.addOnstock(5);
 console.log(book1.inStock);
 book1.save();
+console.log(book1)
