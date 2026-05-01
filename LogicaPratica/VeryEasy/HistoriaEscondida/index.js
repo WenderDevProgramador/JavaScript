@@ -5,9 +5,7 @@
 // Entrada: "Lorem ipsum dolore sec avanti" - Saida: "v"
 
 const highestLetter = (str) => {
-    const lowerStr = str.toLowerCase();
-    const letters = lowerStr.split('')
-    const sortedArry = letters.sort();
+    const sortedArry = str.toLowerCase().split('').sort();
     return sortedArry[sortedArry.length - 1];
 }
 
