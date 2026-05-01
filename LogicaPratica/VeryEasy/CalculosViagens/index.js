@@ -6,9 +6,8 @@
 
 
 const squareDigits = (num) => {
-    let numStr = num.toString().split('');
-    let result = numStr.reduce((acc, dig) =>  acc + (parseInt(dig) ** 2).toString(), '');
-    return parseInt(result);
+    let result = num.toString().split('').reduce((acc, dig) => acc + (parseInt(dig) ** 2).toString(), '');
+    return +result;
 }
 
 console.log(squareDigits(3514)); // 925116
