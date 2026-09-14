@@ -13,3 +13,19 @@
 // Classificação: 'Beta', 'Alfa', 'Delta', 'Gama'
 
 
+class Race {
+    constructor(...racers) {
+        this.racers = racers;
+    }
+
+    getClassification() {
+        const classification = {};
+        for (let i = 0; i < this.racers.length; i++) {
+            classification[`${i + 1}º`] = this.racers[i];
+        }
+        return classification;
+    }
+}
+
+const racel = new Race('Alfa', 'Beta', 'Gama', 'Delta');
+console.log(racel.getClassification());
