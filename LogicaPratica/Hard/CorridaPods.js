@@ -25,7 +25,67 @@ class Race {
         }
         return classification;
     }
+
+    updateClassification(str) {
+        const [racer, action] = str.split(' ');
+
+        if( action.includes('ELIMINATE')) {
+            this.eliminateRacer(racer);
+        } else {
+            this.updateRacer(racer, action);
+        }
+    }
+
+    updateRacer(racer, action) {
+        const eliminated = this.racers.filter(r => r.includes('ELIMINATED'));
+        const active = this.racers.filter(r => !r.includes('ELIMINATED'));
+
+        const currentPosition = active.indexOf(racer);
+        const updatedPosition = currentPosition + parseInt(action) * -1;
+
+        if(updatedPosition >= this.racers.length || updatedPosition < 0) {
+            console.log('Invalid position');
+            return;
+        }
+
+        active.splice(currentPosition, 1);
+        this.racers = [...active.slice(0, updatedPosition), racer, ...active.slice(updatedPosition), ...eliminated];
+
+
+    }
+
+    eliminateRacer(racer) {
+        const eliminated = this.racers.filter(r => r.includes('ELIMINATED'));
+        const active = this.racers.filter(r => !r.includes('ELIMINATED'));
+
+        active.splice(active.indexOf(racer), 1);
+        this.racers = [...active, `${racer} ELIMINATED`, ...eliminated];
+    }
 }
 
 const racel = new Race('Alfa', 'Beta', 'Gama', 'Delta');
+
+console.log(racel)
+racel.updateClassification('Beta + 1');
+console.log(racel)
+
+console.log(racel)
+racel.updateClassification('Gama -1');
+console.log(racel)
+
+console.log(racel)
+racel.updateClassification('Delta ELIMINATE');
+console.log(racel)
+
+console.log(racel)
+racel.updateClassification('Gama + 2');
+console.log(racel)
+
+console.log(racel)
+racel.updateClassification('Alfa + 4');
+console.log(racel)
+
+
+
+
 console.log(racel.getClassification());
